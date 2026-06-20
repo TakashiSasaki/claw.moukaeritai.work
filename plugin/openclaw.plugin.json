@@ -1,0 +1,6 @@
+{
+  "name": "openclaw-dashboard-monitor",
+  "version": "1.0.0",
+  "description": "Send heartbeat to cloud dashboard",
+  "main": "index.js"
+}

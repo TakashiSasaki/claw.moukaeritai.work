@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Node": {
+      "title": "Node",
+      "description": "An OpenClaw Gateway PC node managed in the dashboard.",
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["online", "offline"]
+        },
+        "version": {
+          "type": "string"
+        },
+        "ip_address": {
+          "type": "string"
+        },
+        "current_task": {
+          "type": "string"
+        },
+        "telegram_url": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["status", "version", "ip_address", "current_task", "last_seen"]
+    }
+  },
+  "firestore": {
+    "/nodes/{nodeId}": {
+      "schema": {
+        "$ref": "#/entities/Node"
+      },
+      "description": "Stores the current state of each PC running the OpenClaw Gateway."
+    }
+  }
+}

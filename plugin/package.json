@@ -1,0 +1,9 @@
+{
+  "name": "openclaw-cloud-dashboard-plugin",
+  "version": "1.0.0",
+  "description": "Heartbeat plugin for OpenClaw Dashboard.",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
